@@ -208,15 +208,20 @@ function MovieList() {
               {featureFilmData &&
                 featureFilmData.items.map((movie) => {
                   return (
-                    <li key={movie._id} className="slider__movies-content">
+                    <div className="slider__conainer-movies">
+                      <li key={movie._id} className="slider__movies-content">
+                        <Link to={`detailmovie/${movie._id}`}>
+                          <img
+                            className="slider__movies-images"
+                            src={`${URL_FILM}/${movie.poster_url}`}
+                            alt={movie.name}
+                          />
+                        </Link>
+                      </li>
                       <Link to={`detailmovie/${movie._id}`}>
-                        <img
-                          src={`${URL_FILM}/${movie.poster_url}`}
-                          alt={movie.name}
-                        />
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
             </Carousel>
@@ -265,15 +270,20 @@ function MovieList() {
               {televisionSeriesData &&
                 televisionSeriesData.items.map((movie) => {
                   return (
-                    <li key={movie._id} className="slider__movies-content">
+                    <div className="slider__conainer-movies">
+                      <li key={movie._id} className="slider__movies-content">
+                        <Link to={`detailmovie/${movie._id}`}>
+                          <img
+                            className="slider__movies-images"
+                            src={`${URL_FILM}/${movie.poster_url}`}
+                            alt={movie.name}
+                          />
+                        </Link>
+                      </li>
                       <Link to={`detailmovie/${movie._id}`}>
-                        <img
-                          src={`${URL_FILM}/${movie.poster_url}`}
-                          alt={movie.name}
-                        />
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
             </Carousel>
@@ -322,15 +332,20 @@ function MovieList() {
               {cartoonData &&
                 cartoonData.items.map((movie) => {
                   return (
-                    <li key={movie._id} className="slider__movies-content">
+                    <div className="slider__conainer-movies">
+                      <li key={movie._id} className="slider__movies-content">
+                        <Link to={`detailmovie/${movie._id}`}>
+                          <img
+                            className="slider__movies-images"
+                            src={`${URL_FILM}/${movie.poster_url}`}
+                            alt={movie.name}
+                          />
+                        </Link>
+                      </li>
                       <Link to={`detailmovie/${movie._id}`}>
-                        <img
-                          src={`${URL_FILM}/${movie.poster_url}`}
-                          alt={movie.name}
-                        />
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
             </Carousel>
@@ -338,7 +353,7 @@ function MovieList() {
         </section>
 
         {/* tvshows */}
-        <section className="cartoon">
+        <section className="tvshows">
           <header>
             <h3 class="title-name">{tvShowsData.titlePage}</h3>
             <a class="watch-all" data-api="${api}">
@@ -379,15 +394,20 @@ function MovieList() {
               {tvShowsData &&
                 tvShowsData.items.map((movie) => {
                   return (
-                    <li key={movie._id} className="slider__movies-content">
+                    <div className="slider__conainer-movies">
+                      <li key={movie._id} className="slider__movies-content">
+                        <Link to={`detailmovie/${movie._id}`}>
+                          <img
+                            className="slider__movies-images"
+                            src={`${URL_FILM}/${movie.poster_url}`}
+                            alt={movie.name}
+                          />
+                        </Link>
+                      </li>
                       <Link to={`detailmovie/${movie._id}`}>
-                        <img
-                          src={`${URL_FILM}/${movie.poster_url}`}
-                          alt={movie.name}
-                        />
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
-                    </li>
+                    </div>
                   );
                 })}
             </Carousel>

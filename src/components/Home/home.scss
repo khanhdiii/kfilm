@@ -12,9 +12,41 @@
       z-index: 1000;
     }
   }
+  .feature-film,
+  .television-series,
+  .cartoon,
+  .tvshows {
+    .slider-image__film {
+      .slider__conainer-movies {
+        .slider__movie-name {
+          color: #fff;
+          margin-top: 10px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 16px;
+          cursor: pointer;
+        }
+        .slider__movie-name:hover {
+          color: var(--primry-color);
+        }
+      }
+      .slider__movies-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10px;
+        transition: transform 0.2s ease;
 
-  .slider-image__film {
-    height: 300px;
+        .slider__movies-images {
+          height: 300px;
+        }
+      }
+      .slider__movies-content:hover {
+        transform: scale(1.1);
+      }
+    }
   }
 }
 
