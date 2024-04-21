@@ -9,14 +9,14 @@ function Header() {
         <i className="fa-light fa-bars-staggered"></i>
       </div>
       <div className="logo">
-        <a href="./index.html">KFilm</a>
+        <a href="/">KFilm</a>
       </div>
       <div className="menu-header">
         <div className="close">
           <i class="fa-thin fa-square-xmark"></i>
         </div>
         <div className="menu-header__item">
-          <a href="./index.html">Trang chủ</a>
+          <a href="/">Trang chủ</a>
         </div>
         <div className="menu-header__item">
           <a
