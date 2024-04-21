@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -18,7 +19,9 @@ import Header from "../Header/Header";
 import "../scss/base.scss";
 import "./home.scss";
 
-function MovieList() {
+function MovieList({ api }) {
+  const navigate = useNavigate();
+
   const [movies, setMovies] = useState([]);
   const [featureFilmData, setFeatureFilmData] = useState({
     items: [],
@@ -37,10 +40,10 @@ function MovieList() {
     items: [],
     titlePage: "",
   });
-  let page = 1;
+  const currentPage = 1;
 
   useEffect(() => {
-    const fetchAllData = async (currentPage) => {
+    const fetchAllData = async () => {
       try {
         const allMovies = await fetchAPI(
           `https://phimapi.com/danh-sach/phim-moi-cap-nhat?page=1`
@@ -64,7 +67,7 @@ function MovieList() {
     };
 
     fetchAllData();
-  }, [page]);
+  }, [currentPage]);
 
   const responsiveSlide = {
     desktop: {
@@ -95,7 +98,7 @@ function MovieList() {
         max: 3000,
         min: 1024,
       },
-      items: 6,
+      items: 8,
       partialVisibilityGutter: 40,
     },
     mobile: {
@@ -111,9 +114,20 @@ function MovieList() {
         max: 1024,
         min: 464,
       },
-      items: 2,
+      items: 4,
       partialVisibilityGutter: 30,
     },
+  };
+
+  const handleViewAllMovies = async (api) => {
+    try {
+      const allMovies = await fetchAPI(`${api}?page=1&limit=20`);
+      navigate("/viewall", {
+        state: { movies: allMovies.data.items, api: api }, // Truyền giá trị api vào props
+      });
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
   };
 
   return (
@@ -148,7 +162,7 @@ function MovieList() {
               shouldResetAutoplay
               showDots
               sliderClass=""
-              slidesToSlide={1}
+              slidesToSlide={3}
               swipeable
             >
               {movies &&
@@ -170,7 +184,11 @@ function MovieList() {
         <section className="feature-film">
           <header>
             <h3 class="title-name">{featureFilmData.titlePage}</h3>
-            <a class="watch-all" data-api="${api}">
+            <a
+              class="watch-all"
+              data-api="${api}"
+              onClick={() => handleViewAllMovies(API_FEATUREFILM, currentPage)}
+            >
               Xem tất cả
               <i class="fa-light fa-chevron-right"></i>
             </a>
@@ -202,7 +220,7 @@ function MovieList() {
               shouldResetAutoplay
               showDots={false}
               sliderClass=""
-              slidesToSlide={1}
+              slidesToSlide={3}
               swipeable
             >
               {featureFilmData &&
@@ -232,7 +250,11 @@ function MovieList() {
         <section className="television-series">
           <header>
             <h3 class="title-name">{televisionSeriesData.titlePage}</h3>
-            <a class="watch-all" data-api="${api}">
+            <a
+              class="watch-all"
+              data-api="${api}"
+              onClick={() => handleViewAllMovies(API_TELEVISIONSERIES)}
+            >
               Xem tất cả
               <i class="fa-light fa-chevron-right"></i>
             </a>
@@ -294,7 +316,11 @@ function MovieList() {
         <section className="cartoon">
           <header>
             <h3 class="title-name">{cartoonData.titlePage}</h3>
-            <a class="watch-all" data-api="${api}">
+            <a
+              class="watch-all"
+              data-api="${api}"
+              onClick={() => handleViewAllMovies(API_CARTOON)}
+            >
               Xem tất cả
               <i class="fa-light fa-chevron-right"></i>
             </a>
@@ -356,7 +382,11 @@ function MovieList() {
         <section className="tvshows">
           <header>
             <h3 class="title-name">{tvShowsData.titlePage}</h3>
-            <a class="watch-all" data-api="${api}">
+            <a
+              class="watch-all"
+              data-api="${api}"
+              onClick={() => handleViewAllMovies(API_TVSHOWS)}
+            >
               Xem tất cả
               <i class="fa-light fa-chevron-right"></i>
             </a>

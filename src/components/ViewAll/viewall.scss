@@ -1,0 +1,61 @@
+.view-all {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+}
+
+.movie-item {
+  margin: 10px;
+}
+
+.movie-content {
+  text-align: center;
+}
+
+.movie-image {
+  width: 200px;
+  height: auto;
+}
+
+.movie-name {
+  margin-top: 5px;
+}
+
+.movie-year {
+  margin-top: 5px;
+  color: #666;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination-btn {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.pagination-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-page {
+  padding: 5px 10px;
+  margin: 0 5px;
+  color: #007bff;
+  font-weight: bold;
+}
