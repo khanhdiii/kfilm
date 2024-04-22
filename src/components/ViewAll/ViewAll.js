@@ -46,14 +46,14 @@ function ViewAll() {
           movies.map((movie) => (
             <div key={movie._id} className="movie-item">
               <li className="movie-content">
-                <Link to={`detailmovie/${movie._id}`}>
+                <Link to={`/detailmovie/${movie.slug}`}>
                   <img
                     className="movie-image"
                     src={`${URL_FILM}/${movie.poster_url}`}
                     alt={movie.name}
                   />
                 </Link>
-                <Link to={`detailmovie/${movie._id}`}>
+                <Link to={`/detailmovie/${movie.slug}`}>
                   <h3 className="movie-name">{movie.name}</h3>
                 </Link>
                 <p className="movie-year">{movie.year}</p>
