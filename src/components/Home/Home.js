@@ -19,7 +19,7 @@ import Header from "../Header/Header";
 import "../scss/base.scss";
 import "./home.scss";
 
-function MovieList({ api }) {
+function Home({ api }) {
   const navigate = useNavigate();
 
   const [movies, setMovies] = useState([]);
@@ -169,7 +169,7 @@ function MovieList({ api }) {
                 movies.length > 0 &&
                 movies.map((movie) => (
                   <li key={movie._id} className="slider__movies-content">
-                    <Link to={`detailmovie/${movie._id}`}>
+                    <Link to={`detailmovie/${movie.slug}`}>
                       <img src={movie.poster_url} alt={movie.name} />
                       <h3 className="slider__movie-name">{movie.name}</h3>
                       <p>{movie.year}</p>
@@ -228,7 +228,7 @@ function MovieList({ api }) {
                   return (
                     <div className="slider__conainer-movies">
                       <li key={movie._id} className="slider__movies-content">
-                        <Link to={`detailmovie/${movie._id}`}>
+                        <Link to={`detailmovie/${movie.slug}`}>
                           <img
                             className="slider__movies-images"
                             src={`${URL_FILM}/${movie.poster_url}`}
@@ -236,7 +236,7 @@ function MovieList({ api }) {
                           />
                         </Link>
                       </li>
-                      <Link to={`detailmovie/${movie._id}`}>
+                      <Link to={`detailmovie/${movie.slug}`}>
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
                     </div>
@@ -294,7 +294,7 @@ function MovieList({ api }) {
                   return (
                     <div className="slider__conainer-movies">
                       <li key={movie._id} className="slider__movies-content">
-                        <Link to={`detailmovie/${movie._id}`}>
+                        <Link to={`detailmovie/${movie.slug}`}>
                           <img
                             className="slider__movies-images"
                             src={`${URL_FILM}/${movie.poster_url}`}
@@ -302,7 +302,7 @@ function MovieList({ api }) {
                           />
                         </Link>
                       </li>
-                      <Link to={`detailmovie/${movie._id}`}>
+                      <Link to={`detailmovie/${movie.slug}`}>
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
                     </div>
@@ -360,7 +360,7 @@ function MovieList({ api }) {
                   return (
                     <div className="slider__conainer-movies">
                       <li key={movie._id} className="slider__movies-content">
-                        <Link to={`detailmovie/${movie._id}`}>
+                        <Link to={`detailmovie/${movie.slug}`}>
                           <img
                             className="slider__movies-images"
                             src={`${URL_FILM}/${movie.poster_url}`}
@@ -368,7 +368,7 @@ function MovieList({ api }) {
                           />
                         </Link>
                       </li>
-                      <Link to={`detailmovie/${movie._id}`}>
+                      <Link to={`detailmovie/${movie.slug}`}>
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
                     </div>
@@ -426,7 +426,7 @@ function MovieList({ api }) {
                   return (
                     <div className="slider__conainer-movies">
                       <li key={movie._id} className="slider__movies-content">
-                        <Link to={`detailmovie/${movie._id}`}>
+                        <Link to={`detailmovie/${movie.slug}`}>
                           <img
                             className="slider__movies-images"
                             src={`${URL_FILM}/${movie.poster_url}`}
@@ -434,7 +434,7 @@ function MovieList({ api }) {
                           />
                         </Link>
                       </li>
-                      <Link to={`detailmovie/${movie._id}`}>
+                      <Link to={`detailmovie/${movie.slug}`}>
                         <h3 className="slider__movie-name">{movie.name}</h3>
                       </Link>
                     </div>
@@ -448,4 +448,4 @@ function MovieList({ api }) {
   );
 }
 
-export default MovieList;
+export default Home;
