@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import fetchAPI from "../../utils/fetchAPI";
+
 import Header from "../Header/Header";
+
 import "./watchmovie.scss";
 import "../scss/base.scss";
 
 function WatchMovie() {
   const { slug, episodeSlug } = useParams();
   const [episodeData, setEpisodeData] = useState(null);
+  const [selectedEpisode, setSelectedEpisode] = useState(0);
+
+  const navigate = useNavigate();
+
+  // click chapter film
+  const handleEpisodeClick = (index) => {
+    setSelectedEpisode(index);
+    navigate(`/watchmovie/${slug}/tap-${index + 1}`);
+  };
 
   useEffect(() => {
     const fetchEpisodeDetails = async () => {
       try {
         const API_EPISODE_DETAILS = `https://phimapi.com/phim/${slug}`;
         const episodeDetails = await fetchAPI(API_EPISODE_DETAILS);
-        console.log("episodeDetails", episodeDetails);
         setEpisodeData(episodeDetails);
       } catch (error) {
         console.error("Error fetching episode details:", error);
@@ -22,7 +32,7 @@ function WatchMovie() {
     };
 
     fetchEpisodeDetails();
-  }, []);
+  }, [slug, episodeSlug]);
 
   return (
     <div className="main-page">
@@ -31,10 +41,15 @@ function WatchMovie() {
         <div className="detail-movie">
           {episodeData && (
             <>
-              <h3 className="name-movie">{episodeData.movie.name}</h3>
+              <h3 className="name-movie">
+                {episodeData.episodes[0].server_data[selectedEpisode].filename}
+              </h3>
               <div className="view-iframe">
                 <iframe
-                  src={episodeData.episodes[0].server_data[0].link_embed}
+                  src={
+                    episodeData.episodes[0].server_data[selectedEpisode]
+                      .link_embed
+                  }
                   frameborder="0"
                   className="video"
                   allow="fullscreen"
@@ -43,10 +58,12 @@ function WatchMovie() {
               <div className="episode-list">
                 {episodeData.episodes[0].server_data.map((episode, index) => (
                   <div
-                    className="episode"
+                    className={`episode ${
+                      index === selectedEpisode ? "active" : ""
+                    }`}
                     key={index}
                     data-index={index}
-                    data-linkEmbed={episode.link_embed}
+                    onClick={() => handleEpisodeClick(index)}
                   >
                     {episode.name}
                   </div>
