@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
+import ReactPlayer from "react-player";
+import { useParams, Link, useNavigate } from "react-router-dom";
+
 import fetchAPI from "../../utils/fetchAPI";
 import Header from "../Header/Header";
+
 import { FaPlay } from "react-icons/fa6";
 import "./moviedetails.scss";
+import "../scss/base.scss";
 
 function MovieDetails() {
+  const navigate = useNavigate();
+
   const { slug } = useParams();
   const [movie, setMovie] = useState(null);
+  const [selectedEpisode, setSelectedEpisode] = useState(0);
+
+  // click chapter film
+  const handleEpisodeClick = (index) => {
+    setSelectedEpisode(index);
+    navigate(`/watchmovie/${slug}/tap-${index + 1}`);
+  };
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -29,10 +42,10 @@ function MovieDetails() {
     <div className="main-page">
       <Header />
       <div className="background-movie">
-        <div class="view-iframe">
-          <iframe frameborder="0" class="video" allow="fullscreen">
+        <div>
+          <figure>
             <img src={movie.movie.thumb_url} alt="" />
-          </iframe>
+          </figure>
         </div>
         <div className="movie-info">
           <h3>{movie.movie.name}</h3>
@@ -49,21 +62,26 @@ function MovieDetails() {
             <span className="episode_current">
               {movie.movie.episode_current}
             </span>
+            <span className="type">#{movie.movie.type}</span>
           </div>
         </div>
       </div>
 
       <div className="information-movie">
-        <div>
-          <h4 className="information-movie-tagname">Các tập phim</h4>
-          <ul className="infomation-movie__episode">
-            {movie.episodes[0].server_data.map((episode) => (
-              <li key={episode.slug}>
-                <a href={episode.link_embed}>{episode.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {/* <h4 className="information-movie-tagname">Các tập phim</h4>
+        <div className="episode-list">
+          {movie.episodes[0].server_data.map((episode, index) => (
+            <div
+              className={`episode ${index === selectedEpisode ? "active" : ""}`}
+              key={index}
+              data-index={index}
+              onClick={() => handleEpisodeClick(index)}
+            >
+              {episode.name}
+            </div>
+          ))}
+        </div> */}
+
         <p className="infomation-movie__content">{movie.movie.content}</p>
         {movie.movie.country && movie.movie.country.length > 0 && (
           <span className="infomation-movie__country">
@@ -99,6 +117,18 @@ function MovieDetails() {
               <li key={category.name}>{category.name}</li>
             ))}
           </ul>
+        )}
+        {movie.movie.trailer_url ? (
+          <ReactPlayer
+            url={movie.movie.trailer_url}
+            width="100%"
+            height="640px"
+            playing="false"
+            controls
+            volume={0.5}
+          />
+        ) : (
+          ""
         )}
       </div>
     </div>
