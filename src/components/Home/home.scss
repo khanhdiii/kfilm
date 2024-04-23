@@ -18,7 +18,10 @@
   .tvshows {
     .slider-image__film {
       .slider__conainer-movies {
+        overflow: hidden;
+
         .slider__movie-name {
+          overflow: hidden;
           color: #fff;
           margin-top: 10px;
           display: flex;
@@ -31,6 +34,7 @@
         }
       }
       .slider__movies-content {
+        overflow: hidden;
         display: flex;
         // justify-content: space-between;
         align-items: center;
@@ -73,9 +77,7 @@ section {
 .add-movie,
 .icon-play,
 .movie figure img,
-.movie-name,
-.next,
-.prev {
+.movie-name {
   transition: 0.3s;
 }
 .slide {
@@ -86,23 +88,23 @@ section {
 .slide figure {
   height: 500px;
 }
-.next,
-.prev {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
-  border-radius: 50%;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .next,
+// .prev {
+//   border: 1px solid rgba(255, 255, 255, 0.5);
+//   position: absolute;
+//   top: 50%;
+//   transform: translateY(-50%);
+//   width: 40px;
+//   height: 40px;
+//   font-size: 2rem;
+//   border-radius: 50%;
+//   color: #fff;
+//   background-color: rgba(0, 0, 0, 0.5);
+//   z-index: 999;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 .add-movie.active .icon-remove,
 .movie-name {
   display: block;

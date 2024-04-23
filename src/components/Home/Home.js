@@ -16,6 +16,7 @@ import fetchAPI, {
 } from "../../utils/fetchAPI";
 
 import Header from "../Header/Header";
+
 import "../scss/base.scss";
 import "./home.scss";
 
