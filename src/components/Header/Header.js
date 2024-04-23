@@ -1,6 +1,7 @@
 import React from "react";
 import { FaChevronDown } from "react-icons/fa6";
 import "./header.scss";
+import "../scss/responsive.scss";
 
 function Header() {
   return (
