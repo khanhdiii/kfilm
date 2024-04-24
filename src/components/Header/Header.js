@@ -37,8 +37,8 @@ function Header() {
         <div className="menu-header__item">
           <a
             className="change-page"
-            data-api="https://phimapi.com/v1/api/danh-sach/phim-le"
             onClick={handleClick}
+            data-api="https://phimapi.com/v1/api/danh-sach/phim-le"
           >
             Phim lẻ
           </a>
@@ -46,14 +46,14 @@ function Header() {
         <div className="menu-header__item">
           <a
             className="change-page"
-            data-api="https://phimapi.com/v1/api/danh-sach/phim-bo"
             onClick={handleClick}
+            data-api="https://phimapi.com/v1/api/danh-sach/phim-bo"
           >
             Phim bộ
           </a>
         </div>
         <div className="menu-header__item">
-          <a href="./listMoviesToWatchLater.html">Phim đã lưu</a>
+          <a href="">Phim đã lưu</a>
         </div>
         <div className="menu-header__item">
           <a>
@@ -66,6 +66,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/hanh-dong"
               >
                 Hành Động
@@ -74,6 +75,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/tinh-cam"
               >
                 Tình Cảm
@@ -82,6 +84,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/hai-huoc"
               >
                 Hài Hước
@@ -90,6 +93,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/co-trang"
               >
                 Cổ Trang
@@ -98,6 +102,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/tam-ly"
               >
                 Tâm Lý
@@ -106,6 +111,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/hinh-su"
               >
                 Hình Sự
@@ -114,6 +120,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/chien-tranh"
               >
                 Chiến Tranh
@@ -122,6 +129,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/the-thao"
               >
                 Thể Thao
@@ -130,6 +138,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/vo-thuat"
               >
                 Võ Thuật
@@ -138,6 +147,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/vien-tuong"
               >
                 Viễn Tưởng
@@ -146,6 +156,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/phieu-luu"
               >
                 Phiêu Lưu
@@ -154,6 +165,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/khoa-hoc"
               >
                 Khoa Học
@@ -162,6 +174,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/kinh-di"
               >
                 Kinh Dị
@@ -170,6 +183,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/am-nhac"
               >
                 Âm Nhạc
@@ -178,6 +192,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/than-thoai"
               >
                 Thần Thoại
@@ -186,6 +201,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/tai-lieu"
               >
                 Tài Liệu
@@ -194,6 +210,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/gia-dinh"
               >
                 Gia Đình
@@ -202,6 +219,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/chinh-kich"
               >
                 Chính Kịch
@@ -210,6 +228,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/bi-an"
               >
                 Bí Ẩn
@@ -218,6 +237,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/hoc-duong"
               >
                 Học Đường
@@ -226,6 +246,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/kinh-dien"
               >
                 Kinh Điển
@@ -234,6 +255,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/the-loai/phim-18"
               >
                 Phim 18+
@@ -252,6 +274,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/trung-quoc"
               >
                 Trung Quốc
@@ -260,6 +283,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/han-quoc"
               >
                 Hàn Quốc
@@ -268,6 +292,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/nhat-ban"
               >
                 Nhật Bản
@@ -276,6 +301,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/thai-lan"
               >
                 Thái Lan
@@ -284,6 +310,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/au-my"
               >
                 Âu Mỹ
@@ -292,6 +319,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/dai-loan"
               >
                 Đài Loan
@@ -300,6 +328,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/hong-kong"
               >
                 Hồng Kông
@@ -308,6 +337,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/an-do"
               >
                 Ấn Độ
@@ -316,6 +346,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/anh"
               >
                 Anh
@@ -324,6 +355,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/phap"
               >
                 Pháp
@@ -332,6 +364,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/canada"
               >
                 Canada
@@ -340,6 +373,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/quoc-gia-khac"
               >
                 Quốc Gia Khác
@@ -348,6 +382,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/duc"
               >
                 Đức
@@ -356,6 +391,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/tay-ban-nha"
               >
                 Tây Ban Nha
@@ -364,6 +400,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/tho-nhi-ky"
               >
                 Thổ Nhĩ Kỳ
@@ -372,6 +409,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/ha-lan"
               >
                 Hà Lan
@@ -380,6 +418,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/indonesia"
               >
                 Indonesia
@@ -388,6 +427,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/nga"
               >
                 Nga
@@ -396,6 +436,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/mexico"
               >
                 Mexico
@@ -404,6 +445,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/ba-lan"
               >
                 Ba Lan
@@ -412,6 +454,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/uc"
               >
                 Úc
@@ -420,6 +463,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/thuy-dien"
               >
                 Thụy Điển
@@ -428,6 +472,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/malaysia"
               >
                 Malaysia
@@ -436,6 +481,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/brazil"
               >
                 Brazil
@@ -444,6 +490,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/philippines"
               >
                 Philippines
@@ -452,6 +499,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/bo-dao-nha"
               >
                 Bồ Đào Nha
@@ -460,6 +508,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/y"
               >
                 Ý
@@ -468,6 +517,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/dan-mach"
               >
                 Đan Mạch
@@ -476,6 +526,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/uae"
               >
                 UAE
@@ -484,6 +535,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/na-uy"
               >
                 Na Uy
@@ -492,6 +544,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/thuy-si"
               >
                 Thụy Sĩ
@@ -500,6 +553,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/chau-phi"
               >
                 Châu Phi
@@ -508,6 +562,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/nam-phi"
               >
                 Nam Phi
@@ -516,6 +571,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/ukraina"
               >
                 Ukraina
@@ -524,6 +580,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/a-rap-xe-ut"
               >
                 Ả Rập Xê Út
@@ -532,6 +589,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/bi"
               >
                 Bỉ
@@ -540,6 +598,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/ireland"
               >
                 Ireland
@@ -548,6 +607,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/colombia"
               >
                 Colombia
@@ -556,6 +616,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/phan-lan"
               >
                 Phần Lan
@@ -564,6 +625,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/viet-nam"
               >
                 Việt Nam
@@ -572,6 +634,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/chile"
               >
                 Chile
@@ -580,6 +643,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/hy-lap"
               >
                 Hy Lạp
@@ -588,6 +652,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/nigeria"
               >
                 Nigeria
@@ -596,6 +661,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/argentina"
               >
                 Argentina
@@ -604,6 +670,7 @@ function Header() {
             <li>
               <a
                 className="change-page"
+                onClick={handleClick}
                 data-api="https://phimapi.com/v1/api/quoc-gia/singapore"
               >
                 Singapore
