@@ -10,7 +10,6 @@ function Header() {
   const navigate = useNavigate();
   const handleClick = async (event) => {
     const api = event.target.getAttribute("data-api");
-    console.log(api);
     if (api) {
       const allMovies = await fetchAPI(`${api}?page=1&limit=20`);
       // Chuyển hướng đến trang ViewAll với API đã lấy được
