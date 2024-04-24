@@ -1,9 +1,25 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
+
 import { FaChevronDown } from "react-icons/fa6";
 import "./header.scss";
 import "../scss/responsive.scss";
+import fetchAPI from "../../utils/fetchAPI";
 
 function Header() {
+  const navigate = useNavigate();
+  const handleClick = async (event) => {
+    const api = event.target.getAttribute("data-api");
+    console.log(api);
+    if (api) {
+      const allMovies = await fetchAPI(`${api}?page=1&limit=20`);
+      // Chuyển hướng đến trang ViewAll với API đã lấy được
+      navigate("/viewall", {
+        state: { movies: allMovies.data.items, api: api }, // Truyền giá trị api vào props
+      });
+    }
+  };
+
   return (
     <div className="header">
       <div className="bars">
@@ -23,6 +39,7 @@ function Header() {
           <a
             className="change-page"
             data-api="https://phimapi.com/v1/api/danh-sach/phim-le"
+            onClick={handleClick}
           >
             Phim lẻ
           </a>
@@ -31,6 +48,7 @@ function Header() {
           <a
             className="change-page"
             data-api="https://phimapi.com/v1/api/danh-sach/phim-bo"
+            onClick={handleClick}
           >
             Phim bộ
           </a>
