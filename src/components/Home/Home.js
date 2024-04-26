@@ -19,6 +19,7 @@ import Header from "../Header/Header";
 
 import "../scss/base.scss";
 import "./home.scss";
+import Footer from "../Footer/Footer";
 
 function Home({ api }) {
   const navigate = useNavigate();
@@ -445,6 +446,7 @@ function Home({ api }) {
           </ul>
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

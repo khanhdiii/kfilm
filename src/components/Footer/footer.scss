@@ -1,0 +1,127 @@
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  color: #fff;
+  padding-top: 14rem;
+  padding-bottom: 3rem;
+
+  .wrapper1 {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .container-footer__left {
+      display: flex;
+      gap: 50px;
+      flex-direction: row;
+
+      .menu-start {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        flex-shrink: 0;
+
+        .menu-start__name {
+          font-size: small;
+          text-transform: uppercase;
+          font-weight: 500;
+          cursor: pointer;
+        }
+      }
+
+      .nomal-start {
+        display: flex;
+        gap: 50px;
+        flex-shrink: 0;
+
+        .menu-start {
+          display: flex;
+          flex-direction: column;
+          gap: 3rem;
+
+          .menu-start__name {
+            font-weight: 500;
+            text-transform: uppercase;
+            font-size: small;
+          }
+          .menu-start__nameinfo {
+            font-size: small;
+            color: #fff;
+            opacity: 0.5;
+
+            &:hover {
+              color: #fff;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    .container-footer__right {
+      display: flex;
+      gap: 4rem;
+      justify-content: center;
+
+      .social {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        background-color: #fff;
+        opacity: 0.25;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+
+        &:hover {
+          background-color: #fff;
+          opacity: 0.5;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .wrapper2 {
+    width: 100%;
+    max-width: 1280px;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10rem;
+    gap: 10px;
+
+    .left-start {
+      font-size: small;
+      color: #fff;
+      opacity: 0.5;
+
+      &:hover {
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+
+    .right-start {
+      display: flex;
+      gap: 2rem;
+
+      .right-start__content {
+        font-size: small;
+        color: #fff;
+        opacity: 0.5;
+
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
