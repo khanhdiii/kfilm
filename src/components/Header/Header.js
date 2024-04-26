@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { FaChevronDown } from "react-icons/fa6";
+import fetchAPI from "../../utils/fetchAPI";
+
+import { FaChevronDown, FaBars } from "react-icons/fa6";
 import "./header.scss";
 import "../scss/responsive.scss";
-import fetchAPI from "../../utils/fetchAPI";
 
 function Header() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleClick = async (event) => {
     const api = event.target.getAttribute("data-api");
     if (api) {
@@ -19,10 +22,16 @@ function Header() {
     }
   };
 
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen); // Toggle the menu state
+  };
+
   return (
     <div className="header">
-      <div className="bars">
-        <i className="fa-light fa-bars-staggered"></i>
+      <div className="bars" onClick={handleMenuToggle}>
+        <i className="fa-light fa-bars-staggered">
+          <FaBars />
+        </i>
       </div>
       <div className="logo">
         <a href="/">KFilm</a>
