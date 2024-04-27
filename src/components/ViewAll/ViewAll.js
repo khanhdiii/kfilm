@@ -6,6 +6,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import fetchAPI, { URL_FILM } from "../../utils/fetchAPI";
 
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+
 import "./viewall.scss";
 import "../scss/base.scss";
 
@@ -80,6 +82,7 @@ function ViewAll() {
           />
         </section>
       </div>
+      <Footer />
     </div>
   );
 }

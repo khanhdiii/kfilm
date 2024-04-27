@@ -3,6 +3,9 @@ import { useNavigate, useParams } from "react-router-dom";
 import fetchAPI from "../../utils/fetchAPI";
 
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+// import LikeButton from "../LikeButton/LikeButton";
+import Comment from "../Comment/Comment";
 
 import "./watchmovie.scss";
 import "../scss/base.scss";
@@ -39,6 +42,11 @@ function WatchMovie() {
       <Header />
       <div className="content">
         <div className="detail-movie">
+          {/* like button */}
+          {/* <LikeButton
+            dataHref={"https://developers.facebook.com/docs/plugins/"}
+          /> */}
+
           {episodeData && (
             <>
               <h3 className="name-movie">
@@ -73,6 +81,13 @@ function WatchMovie() {
           )}
         </div>
       </div>
+      <Comment
+        dataHref={
+          "https://developers.facebook.com/docs/plugins/comments#configurator"
+        }
+        width="80%"
+      />
+      <Footer />
     </div>
   );
 }

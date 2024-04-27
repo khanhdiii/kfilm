@@ -4,6 +4,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 
 import fetchAPI from "../../utils/fetchAPI";
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 import { FaPlay } from "react-icons/fa6";
 import "./moviedetails.scss";
@@ -131,6 +132,7 @@ function MovieDetails() {
           ""
         )}
       </div>
+      <Footer />
     </div>
   );
 }
