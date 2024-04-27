@@ -81,12 +81,7 @@ function WatchMovie() {
           )}
         </div>
       </div>
-      <Comment
-        dataHref={
-          "https://developers.facebook.com/docs/plugins/comments#configurator"
-        }
-        width="80%"
-      />
+      <Comment dataHref={"https://kfilm.vercel.app/"} width="80%" />
       <Footer />
     </div>
   );
