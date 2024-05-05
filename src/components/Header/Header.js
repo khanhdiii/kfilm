@@ -6,6 +6,7 @@ import fetchAPI from "../../utils/fetchAPI";
 import { FaChevronDown, FaBars } from "react-icons/fa6";
 import "./header.scss";
 import "../scss/responsive.scss";
+import SearchMovies from "../SearchMovies/SearchMovies";
 
 function Header() {
   const navigate = useNavigate();
@@ -688,11 +689,13 @@ function Header() {
           </ul>
         </div>
       </div>
+
       <div className="search">
-        <input type="text" placeholder="Tìm kiếm..." />
+        <SearchMovies />
+        {/* <input type="text" placeholder="Tìm kiếm..." />
         <button>
           <i className="fa-light fa-magnifying-glass"></i>
-        </button>
+        </button> */}
       </div>
     </div>
   );

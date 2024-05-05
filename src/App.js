@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./components/Home/Home";
-import SearchMovies from "./components/SearchMovies";
+import SearchMovies from "./components/SearchMovies/SearchMovies";
 import Header from "./components/Header/Header";
 import ViewAll from "./components/ViewAll/ViewAll";
 import MovieDetails from "./components/MovieDetails/MovieDetails";
