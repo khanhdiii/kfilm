@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaChevronDown, FaBars } from "react-icons/fa6";
 
 import fetchAPI from "../../utils/fetchAPI";
 
-import { FaChevronDown, FaBars } from "react-icons/fa6";
+import SearchMovies from "../SearchMovies/SearchMovies";
 import "./header.scss";
 import "../scss/responsive.scss";
-import SearchMovies from "../SearchMovies/SearchMovies";
 
 function Header() {
   const navigate = useNavigate();
