@@ -124,4 +124,46 @@ footer {
       }
     }
   }
+
+  @media screen and (max-width: 768px) {
+    .wrapper1 {
+      display: flex;
+      flex-direction: column;
+
+      .container-footer__right {
+        margin-left: 20px;
+      }
+
+      /* Thiết lập các styles cho thiết bị có độ rộng tối đa là 768px (cỡ màn hình điện thoại) */
+      .menu-start,
+      .nomal-start {
+        flex-direction: column; /* Chuyển sang sắp xếp các phần tử theo cột */
+      }
+
+      .social {
+        width: 25px;
+        height: 25px; /* Giảm kích thước của social icons trên thiết bị di động */
+        font-size: 1rem; /* Điều chỉnh kích thước icon trên thiết bị di động */
+      }
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .wrapper1 {
+      display: flex;
+      flex-direction: column;
+
+      /* Thiết lập các styles cho thiết bị có độ rộng tối đa là 768px (cỡ màn hình điện thoại) */
+      .menu-start,
+      .nomal-start {
+        flex-direction: column; /* Chuyển sang sắp xếp các phần tử theo cột */
+      }
+
+      .social {
+        width: 25px;
+        height: 25px; /* Giảm kích thước của social icons trên thiết bị di động */
+        font-size: 1rem; /* Điều chỉnh kích thước icon trên thiết bị di động */
+      }
+    }
+  }
 }
