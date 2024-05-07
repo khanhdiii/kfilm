@@ -58,7 +58,7 @@ function MovieDetails() {
               Xem ngay
               <FaPlay className="background-movie__info" />
             </Link>
-            <span className="quality">{movie.movie.quality}</span>
+            {/* <span className="quality">{movie.movie.quality}</span> */}
             <span className="year">{movie.movie.year}</span>
             <span className="episode_current">
               {movie.movie.episode_current}
