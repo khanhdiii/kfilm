@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ReactPaginate from "react-paginate";
 import { useLocation, useNavigate } from "react-router-dom";
+import ScrollToTop from "react-scroll-to-top";
 
 import fetchAPI, { URL_FILM } from "../../utils/fetchAPI";
 
@@ -45,11 +46,12 @@ function ViewAll() {
     setCurrentPage(page.selected + 1); // +1 vì page.selected bắt đầu từ 0
   };
 
+  console.log(movies);
   return (
     <div className="main-page">
       <Header />
       <div className="content">
-        <h2 className="title-name">All Movies</h2>
+        <h2 className="title-name">Danh mục:</h2>
         <ul className="movie-list">
           {movies &&
             movies.map((movie) => (
