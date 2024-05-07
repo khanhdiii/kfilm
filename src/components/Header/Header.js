@@ -22,7 +22,9 @@ function Header() {
   return (
     <div className="header">
       <div className="logo">
-        <a href="/">KFilm</a>
+        <a href="/">
+          <img src="logo-film.png" />
+        </a>
       </div>
       <div className="menuIcon">
         <FaBars
