@@ -16,10 +16,10 @@ import fetchAPI, {
 } from "../../utils/fetchAPI";
 
 import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
 
 import "../scss/base.scss";
 import "./home.scss";
-import Footer from "../Footer/Footer";
 
 function Home({ api }) {
   const navigate = useNavigate();
@@ -172,7 +172,7 @@ function Home({ api }) {
                 movies.map((movie) => (
                   <li key={movie._id} className="slider__movies-content">
                     <Link to={`detailmovie/${movie.slug}`}>
-                      <img src={movie.poster_url} alt={movie.name} />
+                      <img src={movie.thumb_url} alt={movie.name} />
                       <h3 className="slider__movie-name">{movie.name}</h3>
                       <p>{movie.year}</p>
                     </Link>
