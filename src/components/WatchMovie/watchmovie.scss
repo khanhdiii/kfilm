@@ -47,10 +47,27 @@
 
 // header
 // Mobile & tablet
-@media (max-width: 1023px) {
+@media (min-width: 1023px) {
 }
 // tablet
 @media (min-width: 740px) and (max-width: 1023px) {
+  .name-movie {
+    font-size: large;
+  }
+  .episode-list {
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(120px, 1fr)
+    ); /* Chia cột theo tỷ lệ tự động */
+    gap: 8px; /* Khoảng cách giữa các phần tử */
+  }
+
+  .episode {
+    width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
+    min-height: auto; /* Tự động điều chỉnh chiều cao */
+    font-size: 1.4rem; /* Điều chỉnh kích thước chữ */
+  }
 }
 
 // mobile
