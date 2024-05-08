@@ -308,8 +308,8 @@ function AppMenu({ IsInline = false }) {
           >
             Phim 18+
           </a>
-        </Menu.Item>
-      </Menu.SubMenu> */}
+        </Menu.Item>*/}
+      </Menu.SubMenu>
 
       <Menu.SubMenu
         key="quoc-gia"
