@@ -291,7 +291,7 @@ function AppMenu({ IsInline = false }) {
             Học Đường
           </a>
         </Menu.Item>
-        <Menu.Item key="kinh-dien">
+        {/* <Menu.Item key="kinh-dien">
           <a
             className="change-page"
             onClick={handleClick}
@@ -309,7 +309,7 @@ function AppMenu({ IsInline = false }) {
             Phim 18+
           </a>
         </Menu.Item>
-      </Menu.SubMenu>
+      </Menu.SubMenu> */}
 
       <Menu.SubMenu
         key="quoc-gia"
