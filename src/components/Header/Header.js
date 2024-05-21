@@ -5,6 +5,7 @@ import { Button, Drawer, Menu } from "antd";
 import { AiOutlineClose } from "react-icons/ai";
 import fetchAPI from "../../utils/fetchAPI";
 import SearchMovies from "../SearchMovies/SearchMovies";
+import logo from "../Header/images/logo-film.png";
 
 import "./header.scss";
 
@@ -23,7 +24,7 @@ function Header() {
     <div className="header">
       <div className="logo">
         <a href="/">
-          <img src="logo-film.png" />
+          <img src={logo} />
         </a>
       </div>
       <div className="menuIcon">
